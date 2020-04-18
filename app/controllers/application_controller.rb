@@ -11,10 +11,13 @@ class App < Sinatra::Base
         @team_name = params[:team][:name]
         @team_motto = params[:team][:motto]
         @hero_name = [ ]
+        @hero_power = [ ]
+        @hero_bio = [ ]
         
         
-        params[:team][:super_heroes].each do |details|
-          Super_hero.new(details)
+        @team_members = params[:team][:members]
+        @team_members.each do |hero|
+          @hero_name << hero[:name]
         end
         @super_heroes = Super_hero.all
         
