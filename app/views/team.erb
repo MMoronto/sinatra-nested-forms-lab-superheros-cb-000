@@ -1,4 +1,5 @@
 <h1><%= @team_name %></h1>
+<h2>Team Motto: <%= @team_motto %></h2>
 
 <div class="member">
   <h3>Hero Name: <%= @member.name %></h3><br>
@@ -7,12 +8,12 @@
 </div><br>
 
 <h1>Teams</h1>
-<% @ships.each do |ship| %>
+<% @team_members.each.with_index do |hero, index| %>
   <div class="ship">
     <p>Name: <%= ship.name %></p><br>
     <p>Type: <%= ship.type %></p><br>
-    <p>Booty: <%= ship.booty %></p>
-  </div><br>
+    <p>Booty: <%= ship.booty %>
+    </p>
 <% end %>
 
 
