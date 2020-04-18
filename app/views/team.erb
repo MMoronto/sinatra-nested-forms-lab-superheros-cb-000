@@ -10,9 +10,10 @@
 <h1>Teams</h1>
 <% @team_members.each.with_index do |hero, index| %>
   <div class="ship">
-    <p>Name: <%= ship.name %></p><br>
-    <p>Type: <%= ship.type %></p><br>
-    <p>Booty: <%= ship.booty %>
+    <p>
+      <h3>Hero Name: <%= @member.name %></h3><br>
+      <h4>Hero Power: <%= @member.power %></h4><br>
+      <h4>Hero Biography: <%= @member.bio %></h4>
     </p>
 <% end %>
 
